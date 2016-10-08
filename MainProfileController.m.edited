@@ -1,0 +1,167 @@
+    //
+//  MainProfileController.m
+//  CrowdscannerMatch
+//
+//  Created by Adrian Avendano on 08/11/2010.
+//  Copyright 2010 crowdscanner. All rights reserved.
+//
+
+#import <QuartzCore/QuartzCore.h>
+#import <CoreGraphics/CoreGraphics.h>
+#import "MainProfileController.h"
+#import "ipadCrowdAppDelegate.h"
+#import "SelectQuestionController.h"
+#import "ProcessQuestionSQL.h"
+
+
+
+@implementation MainProfileController
+@synthesize tabTable, theTabView,  outerGreyPhoto, innerGreyPhoto, outerGreyInfo, nameLabel, countryLabel,aboutLabel, clonesLabel, 
+numberClonesLabel, profileImage, cloneImage, headerImage, questionController, questionBundleLabel;
+
+
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad {
+	
+	ProcessQuestionSQL *deleteQuestions = [[ProcessQuestionSQL alloc] init];
+	[deleteQuestions dummyOperationdelete];
+	
+	UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+<<<<<<< .mine
+	if (orientation == UIInterfaceOrientationPortrait){			
+		//code when it first loads you grab theTabView		
+		
+	}
+	else {				
+		//code for landscape
+=======
+	if (orientation != UIInterfaceOrientationPortrait){			
+	
+		outerGreyPhoto.frame = CGRectMake(21, 96, 251, 251);
+		headerImage.frame = CGRectMake(21, 21, 251, 68);
+		theTabView.frame = CGRectMake(286, 97, 725, 629);		
+		outerGreyInfo.frame = CGRectMake(21, 347, 251, 379);
+		aboutLabel.frame = CGRectMake(14, 132, 230, 114);
+		clonesLabel.frame = CGRectMake(100, 268, 137, 51);	
+		numberClonesLabel.frame = CGRectMake(208, 225, 29, 51);
+		cloneImage.frame = CGRectMake(195, 317, 42, 42);
+		questionBundleLabel.frame = CGRectMake(853, 75, 159, 62);
+>>>>>>> .r412
+	}	
+	[deleteQuestions release];
+    [super viewDidLoad];
+}
+
+
+- (void) slideTheView:(QuestionBundle *) theBundle {
+	
+	NSLog(@"ALOHA SLIDER");
+	
+	NSArray *allSubViews = self.view.subviews;
+	for (UIView *subView in allSubViews) {
+		[subView removeFromSuperview];
+	}
+	
+	SelectQuestionController *aNextView = [[SelectQuestionController alloc] initWithNibName:@"SelectQuestionController" bundle:nil];
+	aNextView.questionIndex = 0;
+	aNextView.questionObject = [theBundle.questions objectAtIndex:0];
+	aNextView.theBundle = theBundle;
+	self.questionController = aNextView;
+		
+	[self.view addSubview:self.questionController.view];	
+
+	// set up an animation for the transition between the views
+	CATransition *animation = [CATransition animation];
+	[animation setDuration:0.9];
+	[animation setType:kCATransitionMoveIn];
+	[animation setSubtype:kCATransitionFromRight];
+	[animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+	
+	[[self.view layer] addAnimation:animation forKey:@"SwitchToView1"];
+	[aNextView release];
+	
+	
+}
+
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Overriden to allow any orientation.
+    return YES;
+}
+
+
+- (void)didReceiveMemoryWarning {
+    // Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+    
+    // Release any cached data, images, etc that aren't in use.
+}
+
+
+- (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+	
+	//This is when is portrait
+	if (toInterfaceOrientation == UIInterfaceOrientationPortrait || toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown){			
+		
+		outerGreyPhoto.frame = CGRectMake(21, 96, 251, 251);
+		headerImage.frame = CGRectMake(21, 21, 251, 68);
+		theTabView.frame = CGRectMake(21, 361, 725, 629);
+		outerGreyInfo.frame = CGRectMake(272, 96, 474, 251);
+		aboutLabel.frame = CGRectMake(14, 123, 230, 114);
+		clonesLabel.frame = CGRectMake(323, 123, 137, 51);
+		numberClonesLabel.frame = CGRectMake(431, 80, 29, 51);
+		cloneImage.frame = CGRectMake(418, 172, 42, 42);
+		questionBundleLabel.frame = CGRectMake(588, 340, 159, 62);
+	}
+	else {// when is landscape				
+				
+		outerGreyPhoto.frame = CGRectMake(21, 96, 251, 251);
+		headerImage.frame = CGRectMake(21, 21, 251, 68);
+		theTabView.frame = CGRectMake(286, 97, 725, 629);		
+		outerGreyInfo.frame = CGRectMake(21, 347, 251, 379);
+		aboutLabel.frame = CGRectMake(14, 132, 230, 114);
+		clonesLabel.frame = CGRectMake(100, 268, 137, 51);
+		numberClonesLabel.frame = CGRectMake(208, 225, 29, 51);
+		cloneImage.frame = CGRectMake(195, 317, 42, 42);
+		questionBundleLabel.frame = CGRectMake(853, 75, 159, 62);
+	}
+	
+	[self.questionController willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+	
+	[self.view setNeedsDisplay];		
+	[super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+}	
+
+
+<<<<<<< .mine
+
+=======
+>>>>>>> .r412
+- (void)viewDidUnload {
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+
+- (void)dealloc {
+	[questionBundleLabel release];
+	[questionController release];
+	[theTabView release];
+	[headerImage release];
+	[cloneImage release];
+	[outerGreyPhoto release];
+	[innerGreyPhoto release];
+	[outerGreyInfo release];
+	[nameLabel release];
+	[countryLabel release];
+	[aboutLabel release];
+	[tabTable release];
+	[clonesLabel release];
+	[numberClonesLabel release];
+	[profileImage release];
+    [super dealloc];
+}
+
+
+@end

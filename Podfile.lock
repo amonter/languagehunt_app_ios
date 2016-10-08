@@ -1,0 +1,53 @@
+PODS:
+  - AFNetworking (2.5.2):
+    - AFNetworking/NSURLConnection (= 2.5.2)
+    - AFNetworking/NSURLSession (= 2.5.2)
+    - AFNetworking/Reachability (= 2.5.2)
+    - AFNetworking/Security (= 2.5.2)
+    - AFNetworking/Serialization (= 2.5.2)
+    - AFNetworking/UIKit (= 2.5.2)
+  - AFNetworking/NSURLConnection (2.5.2):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.2):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.2)
+  - AFNetworking/Security (2.5.2)
+  - AFNetworking/Serialization (2.5.2)
+  - AFNetworking/UIKit (2.5.2):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Bolts (1.1.4)
+  - Facebook-iOS-SDK (3.23.1):
+    - Bolts (~> 1.0)
+  - HPGrowingTextView (1.1)
+  - IOSLinkedInAPI (2.0.0):
+    - AFNetworking (>= 2.0.0)
+  - PaymentKit (1.1.1)
+  - Stripe (3.1.0):
+    - Stripe/Core (= 3.1.0)
+  - Stripe/Core (3.1.0)
+  - UITextView+Placeholder (1.0.9)
+
+DEPENDENCIES:
+  - Facebook-iOS-SDK (~> 3.15)
+  - HPGrowingTextView (~> 1.1.0)
+  - IOSLinkedInAPI (~> 2.0.0)
+  - PaymentKit
+  - Stripe
+  - UITextView+Placeholder
+
+SPEC CHECKSUMS:
+  AFNetworking: fefbce9660acb17f48ae0011292d4da0f457bf36
+  Bolts: f8e2f94edbf9fec7bb8de5ecaaa3aa6b7de6f64e
+  Facebook-iOS-SDK: d5a50d5ac6b1da948fd98c18dd8beeae854f2b3e
+  HPGrowingTextView: 88a716d97fb853bcb08a4a08e4727da17efc9b19
+  IOSLinkedInAPI: d0adc664472d471b0df9b2aad92a2d82de926c40
+  PaymentKit: 323c25233af5060880daa0c31366d4b688c34487
+  Stripe: 8a456332f4db97bd0b8457fc8cce1e1a69ac0cd1
+  UITextView+Placeholder: 83895056749372c96febfb43f536c9b1aae3e08e
+
+COCOAPODS: 0.36.0

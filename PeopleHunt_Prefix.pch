@@ -1,0 +1,13 @@
+//
+// Prefix header for all source files of the 'RealOusiastikos' target in the 'RealOusiastikos' project
+//
+#import <Availability.h>
+
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+
+    #import <SystemConfiguration/SystemConfiguration.h>
+    #import <netinet/in.h>
+#endif

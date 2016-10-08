@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FacebookDisplayName</key>
+	<string>Language Hunt</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIconFile</key>
+	<string>iconTryNew.png</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>iconTryNew.png</string>
+		<string>iconTryNew@2x.png</string>
+		<string>iconTryNew@3x.png</string>
+	</array>
+	<key>CFBundleIdentifier</key>
+	<string>com.language.languagehunt</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1.5</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1590157511269878</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.peoplehuntme.peoplehunt</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>peoplehunt</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1.1.5</string>
+	<key>FacebookAppID</key>
+	<string>1590157511269878</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Guide recommendations will be presented based on your location</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Guide recommendations will be presented based on your location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Guide recommendations will be presented based on your location</string>
+	<key>NSMainNibFile</key>
+	<string>MainWindow</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FreightSans Medium.ttf</string>
+		<string>FreightSans Bold.ttf</string>
+		<string>Delicious-Heavy.otf</string>
+		<string>Delicious-Roman.otf</string>
+	</array>
+	<key>UIPrerenderedIcon</key>
+	<true/>
+	<key>UIStatusBarHidden</key>
+	<false/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleBlackOpaque</string>
+	<key>UIStatusBarTintParameters</key>
+	<dict>
+		<key>UINavigationBar</key>
+		<dict>
+			<key>Style</key>
+			<string>UIBarStyleDefault</string>
+			<key>Translucent</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+</dict>
+</plist>
